@@ -9,3 +9,4 @@ data "aws_ssm_parameter" "pass" {
 data "aws_kms_key" "kms_key" {
   key_id = "alias/s3-devops71"
 }
+
