@@ -7,8 +7,8 @@ resource "aws_rds_cluster" "main" {
   master_password         = data.aws_ssm_parameter.pass.value
   backup_retention_period = var.backup_retention_period
   preferred_backup_window = var.preferred_backup_window
-  aws_docdb_subnet_group = aws_docdb_subnet_group.main.name
-  aws_kms_key = data.aws_kms_key.kms_key.arn
+  db_subnet_group_name = aws_docdb_subnet_group.main.name
+  kms_key_id = data.aws_kms_key.kms_key.arn
   storage_encrypted = var.storage_encrypted
 }
 
