@@ -23,7 +23,7 @@ resource "aws_rds_cluster_instance" "cluster_instances" {
 }
 
 resource "aws_docdb_subnet_group" "main" {
-  name       = "${var.env}-subnet_group"
+  name       = "${var.env}-rds-subnet_group"
   subnet_ids = var.subnet_ids
 
   tags = merge(
