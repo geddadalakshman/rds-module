@@ -13,3 +13,4 @@ variable "subnet_ids" {}
 variable "storage_encrypted" {
   default = true
 }
+variable "skip_final_snapshot" {}
