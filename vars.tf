@@ -1,17 +1,20 @@
 variable "env" {}
-variable "engine" {}
+variable "subnet_ids" {}
+variable "tags" {}
 variable "database_name" {
-  default = "Test"
+  default = "dummy"
 }
-variable "engine_version" {}
+
 variable "backup_retention_period" {}
 variable "preferred_backup_window" {}
+variable "engine" {}
+variable "engine_version" {}
 variable "no_of_instances" {}
 variable "instance_class" {}
-variable "tags" {}
-variable "subnet_ids" {}
-variable "storage_encrypted" {
-  default = true
-}
-variable "skip_final_snapshot" {}
+variable "vpc_id" {}
+variable "allow_subnets" {}
+
+
+
+
 
